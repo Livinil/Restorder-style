@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>O Rest&#039;O - Restorder</title>        
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">        
+	<link href="/css/jquery.mobile-1.2.0.min.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+	<link rel="stylesheet" href="theme.css" />
+	<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
+	<!--[if lt IE 9]><script type="text/javascript" src="/js/html5.js"></script><![endif]-->
+	<script type="text/javascript" src="/js/jquery.mobile-1.2.0.min.js"></script>    
+</head>
+<body>
+	<div id="container" data-role="page" data-theme="a" data-url="/admin/settings">
+		<div data-role="header" data-position="fixed">
+			<h1>Restaurant name <span class="powered">powered by Restorder</span></h1>	
+			<a href="/" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-notext ui-btn-up-f" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" title="Home">
+				<span class="ui-btn-inner ui-btn-corner-all">
+					<span class="ui-btn-text">Home</span>
+					<span class="ui-icon ui-icon-home ui-icon-shadow">&nbsp;</span>
+				</span>
+			</a>
+		</div>
+		
+		<div data-role="content">
+											
+			<h1>Settings</h1>
+
+			<form action="/admin/settings" method="post" name="settings" id="settings">
+			<div data-role="fieldcontain">
+			<label class="ui-input-text" for="name">Name</label><input name="name" type="text" placeholder="Name" value="O Rest&#039;O"></div>
+			<div data-role="fieldcontain">    
+			<label class="ui-input-text" for="address">Address</label><textarea name="address" placeholder="Restaurant address">EH11 1BS</textarea></div>
+			<div data-role="fieldcontain">
+			<label class="ui-input-text" for="phone">Phone number</label><input name="phone" type="tel" placeholder="Phone number" value=""></div>
+			<div data-role="fieldcontain">
+			<label class="ui-input-text" for="numberTables">Number of tables</label><input type="number" name="numberTables" placeholder="Number of tables" value="10"></div>
+			<div data-role="fieldcontain">
+			<label class="ui-input-text" for="websiteUrl">Website</label><input type="url" name="websiteUrl" placeholder="Website (http://)" value="http://www.prestalyon.com"></div>
+			<div data-role="fieldcontain">
+			<label class="ui-input-text" for="barEnable">Enable bar features</label><select name="barEnable" id="barEnable" data-role="slider"><option value="0">false</option>
+			<option value="1" selected="selected">true</option></select></div>
+			<div data-role="fieldcontain">
+			<label class="ui-input-text" for="currency">Currency</label><select name="currency"><option value="GBP" selected="selected">British Pound</option>
+			<option value="EUR">Euro</option>
+			<option value="USD">US Dollar</option>
+			<option value="INR">Indian Rupee</option>
+			<option value="AUD">Australian Dollar</option>
+			<option value="CAD">Canadian Dollar</option>
+			<option value="AED">Emirati Dirham</option>
+			<option value="CHF">Swiss Franc</option>
+			<option value="CNY">Chinese Yuan Renminbi</option>
+			<option value="JPY">Japanese Yen</option>
+			<option value="MYR">Malaysian Ringgit</option></select></div>
+
+			<input name="submit" type="submit" id="submitbutton" value="Save"></form>            
+		</div>
+            
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h4><a href="http://www.restorder.eu">RestOrder</a> powered by Thomas Dutrion for <a href="http://www.napier.ac.uk">Edinburgh Napier University</a>.</h4>
+		</div>
+	</div>
+</body>
+</html>
